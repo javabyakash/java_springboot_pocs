@@ -1,0 +1,9 @@
+<html xmlns:th="https://www.thymeleaf.org">
+	<body>
+		<h1 style="color:greenyellow;text-align:center"> WELCOME TO ADMIN PAGE! </h1>
+		<br>
+		<form th:action="@{/logout}" method="POST">
+			<input type="submit" value="Sign Out"/>
+		</form>
+	</body>
+</html>

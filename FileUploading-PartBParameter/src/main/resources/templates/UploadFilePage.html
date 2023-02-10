@@ -1,0 +1,44 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/boot
+strap.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/fontawesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white textcenter">
+				<h3>DOCUMENTS PAGE</h3>
+			</div>
+			<div class="card-body">
+				<form th:action="@{/partbparam/upload}" method="POST" enctype="multipart/form-data">
+
+					<!-- Row#1 -->
+					<div class="row">
+						<div class="col-3">
+							<label>DOCUMENT</label>
+						</div>
+						<div class="col-4">
+							<input type="file" name="docOb" id="docOb" class="form-control" />
+						</div>
+						<div class="col-5">
+							<span id="docObError"></span>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success">
+						UPLOAD <i class="fa fa-cloud-upload" ariahidden="true"></i>
+					</button>
+				</form>
+			</div>
+			<!--<div class="card-footer bg-success text-white" th:if="${message!=null}"></div>-->
+			<div class="bg-success text-white text-center" th:text="${message}"></div>
+		</div> <!-- card end -->
+	</div>
+	<!-- container end -->
+</body>
+
+</html>
